@@ -1,12 +1,46 @@
 {
-  "name": "csv_tools_jupyterlab_ext",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "name": "csv_tools",
+  "version": "0.1.0",
+  "description": "This project aims to add basic GUI manipulation of csv files in a JupyterLab environment",
+  "keywords": [
+    "jupyter",
+    "jupyterlab",
+    "jupyterlab-extension"
+  ],
+  "homepage": "https://github.com/dmeyer3691/csv_tools_jupyterlab_ext",
+  "bugs": {
+    "url": "https://github.com/dmeyer3691/csv_tools_jupyterlab_ext/issues"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "license": "BSD-3-Clause",
+  "author": "NC A&T University in partnership with Cisco Systems",
+  "files": [
+    "lib/**/*.{d.ts,eot,gif,html,jpg,js,js.map,json,png,svg,woff2,ttf}",
+    "style/**/*.{css,eot,gif,html,jpg,json,png,svg,woff2,ttf}"
+  ],
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "style": "style/index.css",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dmeyer3691/csv_tools_jupyterlab_ext.git"
+  },
+  "scripts": {
+    "build": "tsc",
+    "clean": "rimraf lib tsconfig.tsbuildinfo",
+    "prepare": "jlpm run clean && jlpm run build",
+    "watch": "tsc -w"
+  },
+  "dependencies": {
+    "@jupyterlab/application": "^1.0.0"
+  },
+  "devDependencies": {
+    "rimraf": "^2.6.1",
+    "typescript": "~3.5.2"
+  },
+  "sideEffects": [
+    "style/*.css"
+  ],
+  "jupyterlab": {
+    "extension": true
+  }
 }
