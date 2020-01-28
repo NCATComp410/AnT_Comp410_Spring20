@@ -1,15 +1,15 @@
 {
-  "name": "csv_tools",
+  "name": "jupyterlab_tableview",
   "version": "0.1.0",
-  "description": "This project aims to add basic GUI manipulation of csv files in a JupyterLab environment",
+  "description": "This project aims to add basic GUI manipulation of csv or excel files in a JupyterLab environment",
   "keywords": [
     "jupyter",
     "jupyterlab",
     "jupyterlab-extension"
   ],
-  "homepage": "https://github.com/dmeyer3691/csv_tools_jupyterlab_ext",
+  "homepage": "https://github.com/dmeyer3691/jupyterlab_tableview",
   "bugs": {
-    "url": "https://github.com/dmeyer3691/csv_tools_jupyterlab_ext/issues"
+    "url": "https://github.com/dmeyer3691/jupyterlab_tableview"
   },
   "license": "BSD-3-Clause",
   "author": "NC A&T University in partnership with Cisco Systems",
@@ -22,7 +22,7 @@
   "style": "style/index.css",
   "repository": {
     "type": "git",
-    "url": "https://github.com/dmeyer3691/csv_tools_jupyterlab_ext.git"
+    "url": "https://github.com/dmeyer3691/jupyterlab_tableview.git"
   },
   "scripts": {
     "build": "tsc",

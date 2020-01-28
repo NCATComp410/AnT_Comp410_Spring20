@@ -4,13 +4,13 @@ import {
 
 
 /**
- * Initialization data for the csv_tools extension.
+ * Initialization data for the jupyterlab_tableview extension.
  */
 const extension: JupyterFrontEndPlugin<void> = {
-  id: 'csv_tools',
+  id: 'jupyterlab_tableview',
   autoStart: true,
   activate: (app: JupyterFrontEnd) => {
-    console.log('JupyterLab extension csv_tools is activated!');
+    console.log('JupyterLab extension jupyterlab_tableview is activated!');
   }
 };
 

@@ -1,6 +1,6 @@
-# csv_tools
+# jupyterlab_tableview
 
-![Github Actions Status](https://github.com/dmeyer3691/csv_tools_jupyterlab_ext/workflows/Build/badge.svg)
+![Github Actions Status](https://github.com/dmeyer3691/jupyterlab_tableview/workflows/Build/badge.svg)
 
 This project aims to add basic GUI manipulation of csv files in a JupyterLab environment
 
@@ -11,16 +11,16 @@ This project aims to add basic GUI manipulation of csv files in a JupyterLab env
 ## Install
 
 ```bash
-jupyter labextension install csv_tools
+jupyter labextension install jupyterlab_tableview
 ```
 
 ## Contributing
 
-Please fork this repository into your own github user space and create a new branch with your user ID and the feature you're working on. When ready to contribute back to this main repository, create a pull request for the development branch.
+Please fork this repository into your own github user space and create a new branch with your user ID and the feature you're working on. When ready to contribute back to this main repository, create a pull request for the development branch. Current backlog of work can be found [here](https://github.com/dmeyer3691/jupyterlab_tableview/projects) 
 
 ### Environment Setup
 
-Please reference the *Set up a development environment* section in this [tutorial](https://jupyterlab.readthedocs.io/en/stable/developer/extension_tutorial.html#set-up-a-development-environment)
+Please reference the **Set up a development environment** section in this [tutorial](https://jupyterlab.readthedocs.io/en/stable/developer/extension_tutorial.html#set-up-a-development-environment)
 
 
 ### Install
@@ -31,7 +31,7 @@ The `jlpm` command is JupyterLab's pinned version of
 
 ```bash
 # Clone the repo to your local environment
-# Move to csv_tools_jupyter_ext directory
+# Move to jupyterlab_tableview directory
 # Install dependencies
 jlpm
 # Build Typescript source
@@ -56,6 +56,6 @@ jupyter lab --watch
 ### Uninstall
 
 ```bash
-jupyter labextension uninstall csv_tools
+jupyter labextension uninstall jupyterlab_tableview
 ```
 
