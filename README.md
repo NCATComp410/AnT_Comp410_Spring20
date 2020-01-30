@@ -43,12 +43,30 @@ jlpm build
 # Rebuild JupyterLab after making any changes
 jupyter lab build
 ```
+### For Development
+If you are using `Anaconda`/`Miniconda`, we recommend you install and activate a separate Anaconda environment for development purposes:
+```bash
+# Create environment
+conda create -n jupyterlab-ext --override-channels --strict-channel-priority -c conda-forge -c anaconda jupyterlab cookiecutter nodejs git
 
-You can watch the source directory and run JupyterLab in watch mode to watch for changes in the extension's source and automatically rebuild the extension and application.
+# Activate environment
+conda activate jupyterlab-ext
+```
 
+Install all Javascript dependencies for the extension and install it in the Jupyterlab environment without building it initially
+```bash
+jlpm install
+jupyter labextension install . --no-build
+```
+
+You can now build and watch the extension's source directory. 
 ```bash
 # Watch the source directory in another terminal tab
 jlpm watch
+```
+Then, in a separate terminal, run JupyterLab in watch mode to watch for changes in the extension's source and automatically rebuild Jupyterlab.
+(Note: Make sure to activate the conda environment in this terminal window before running the following command)
+```bash
 # Run jupyterlab in watch mode in one terminal tab
 jupyter lab --watch
 ```
