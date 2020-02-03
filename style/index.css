@@ -1,0 +1,23 @@
+.jp-Tableview {
+    display: flex;
+    flex-direction: column;
+    outline: none;
+    overflow: scroll;
+    padding: 1rem;
+}
+.jp-Tableview table {
+    border-spacing: 0;
+    border: 1px solid black;
+}
+.jp-Tableview table tr :last-child td {
+    border-bottom: 0;
+}
+.jp-Tableview table th, .jp-Tableview table td {
+    margin: 0;
+    padding: 0.5rem;
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+}
+.jp-Tableview table th :last-child, .jp-Tableview table td :last-child {
+    border-right: 0;
+}
