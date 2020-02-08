@@ -1,79 +1,68 @@
-# jupyterlab_tableview
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-![Github Actions Status](https://github.com/dmeyer3691/jupyterlab_tableview/workflows/Build/badge.svg)
+## Available Scripts
 
-This project aims to add basic GUI manipulation of csv files in a JupyterLab environment
+In the project directory, you can run:
 
-## Requirements
+### `yarn start`
 
-* JupyterLab >= 1.0
+Runs the app in the development mode.<br />
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-## Install
+The page will reload if you make edits.<br />
+You will also see any lint errors in the console.
 
-```bash
-jupyter labextension install jupyterlab_tableview
-```
+### `yarn test`
 
-## Contributing
+Launches the test runner in the interactive watch mode.<br />
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-Please fork this repository into your own github user space and create a new branch with your user ID and the feature you're working on. When ready to contribute back to this main repository, create a pull request for the development branch. Current backlog of work can be found [here](https://github.com/dmeyer3691/jupyterlab_tableview/projects) 
+### `yarn build`
 
-### Environment Setup
+Builds the app for production to the `build` folder.<br />
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-Please reference the **Set up a development environment** section in this [tutorial](https://jupyterlab.readthedocs.io/en/stable/developer/extension_tutorial.html#set-up-a-development-environment)
+The build is minified and the filenames include the hashes.<br />
+Your app is ready to be deployed!
 
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### Install
+### `yarn eject`
 
-The `jlpm` command is JupyterLab's pinned version of
-[yarn](https://yarnpkg.com/) that is installed with JupyterLab. You may use
-`yarn` or `npm` in lieu of `jlpm` below.
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-```bash
-# Clone the repo to your local environment
-# Move to jupyterlab_tableview directory
-# Install dependencies
-jlpm
-# Build Typescript source
-jlpm build
-# Link your development version of the extension with JupyterLab
-jupyter labextension link .
-# Rebuild Typescript source after making changes
-jlpm build
-# Rebuild JupyterLab after making any changes
-jupyter lab build
-```
-### For Development
-If you are using `Anaconda`/`Miniconda`, we recommend you install and activate a separate Anaconda environment for development purposes:
-```bash
-# Create environment
-conda create -n jupyterlab-ext --override-channels --strict-channel-priority -c conda-forge -c anaconda jupyterlab cookiecutter nodejs git
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-# Activate environment
-conda activate jupyterlab-ext
-```
+Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-Install all Javascript dependencies for the extension and install it in the Jupyterlab environment without building it initially
-```bash
-jlpm install
-jupyter labextension install . --no-build
-```
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-You can now build and watch the extension's source directory. 
-```bash
-# Watch the source directory in another terminal tab
-jlpm watch
-```
-Then, in a separate terminal, run JupyterLab in watch mode to watch for changes in the extension's source and automatically rebuild Jupyterlab.
-(Note: Make sure to activate the conda environment in this terminal window before running the following command)
-```bash
-# Run jupyterlab in watch mode in one terminal tab
-jupyter lab --watch
-```
+## Learn More
 
-### Uninstall
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-```bash
-jupyter labextension uninstall jupyterlab_tableview
-```
+To learn React, check out the [React documentation](https://reactjs.org/).
 
+### Code Splitting
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+
+### Analyzing the Bundle Size
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+
+### Making a Progressive Web App
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+
+### Advanced Configuration
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+
+### Deployment
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+
+### `yarn build` fails to minify
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
