@@ -5,7 +5,7 @@ import SimpleFileUploader from "./components/FileUploader/FileUploader";
 function App() {
   return (
     <div className="App">
-	Hello World, Aggie Pride - WorldWide!!! #1 HBCU!
+      Aggie Pride-Cyber Pirates
       <SimpleFileUploader />
     </div>
   );
