@@ -13,9 +13,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
-      - name: Install
-        run: yarn --no-progress --non-interactive --no-lockfile
-      - name: Build
-        run: yarn build
-      - name: Test
-        run: yarn test
+      - name: Install, Test and Build
+        run: |
+          yarn install
+          yarn test
+          yarn build
