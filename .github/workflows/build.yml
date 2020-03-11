@@ -2,7 +2,9 @@ name: Build
 
 on:
   push:
-    branches: master
+    branches:
+      - master
+      - react_base
   pull_request:
     branches: '*'
 
