@@ -1,4 +1,4 @@
-#Sprint 3
+# Sprint 3
 During sprint 3 each team will implement the assigned features.  To more easily communicate expectations for each
 of the features, animated mock-ups have been created (see below)
 
