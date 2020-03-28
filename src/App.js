@@ -5,7 +5,7 @@ import SimpleFileUploader from "./components/FileUploader/FileUploader";
 function App() {
   return (
     <div className="App">
-      Aggie Pride-Cyber Pirates
+      Aggie Pride -  All Mighty Programers 
       <SimpleFileUploader />
     </div>
   );
