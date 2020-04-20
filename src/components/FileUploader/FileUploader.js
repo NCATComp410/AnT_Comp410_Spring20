@@ -21,7 +21,7 @@ class SimpleFileUploader extends React.Component {
       // header rows to a list which will appear in
       // parsedData.meta.fields
       const parsedData = Papa.parse(rawText, {
-        header:true
+        header: true
       });
       this.setState({ fileData: parsedData });
     };
