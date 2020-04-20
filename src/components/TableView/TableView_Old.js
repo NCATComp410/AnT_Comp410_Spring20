@@ -39,30 +39,18 @@ const TableView = ({ parseResult }) => {
         {headerGroups.map(headerGroup => (
             <tr {...headerGroup.getHeaderGroupProps()}>
                 {headerGroup.headers.map(column => (
-                 
-                     // Table header styling and props to allow sorting
-                        <th {...column.getHeaderProps(column.getSortByToggleProps())}
-                          className={ 
-                             column.isSorted
-                             ? column.isSortedDesc
-                              //? ' 🔽'
-                              //: ' 🔼'
-                                ? "sort-desc"
-                                : "sort-asc"
-                              : "" }
-
-
+                    <th
+                        {...column.getHeaderProps()}
                         style={{
                             borderBottom: 'solid 3px black',
                             background: 'lightgray',
                             color: 'black',
                             fontWeight: 'bold',
-                               }} 
-                                   >{column.render('Header')}
-                        </th>
-                    ))}
-                </tr>
-            ))}
+                        }}
+                    >{column.render('Header')}</th>
+                ))}
+            </tr>
+        ))}
         </thead>
         <tbody {...getTableBodyProps()}>
         {rows.map(row => {

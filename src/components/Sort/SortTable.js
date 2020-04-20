@@ -30,8 +30,8 @@ const TableView = ({ parseResult }) => {
         prepareRow
     } = useTable({
         columns,
-        data},
-        useSortBy);
+        data
+    });
 
     // Render the actual table UI
     return <table {...getTableProps()} style={{border: 'solid 1px black'}}>
@@ -40,29 +40,55 @@ const TableView = ({ parseResult }) => {
             <tr {...headerGroup.getHeaderGroupProps()}>
                 {headerGroup.headers.map(column => (
                  
-                     // Table header styling and props to allow sorting
-                        <th {...column.getHeaderProps(column.getSortByToggleProps())}
-                          className={ 
-                             column.isSorted
-                             ? column.isSortedDesc
+                 
+                    //<th
+                      //  {...column.getHeaderProps()}
+                        //style={{
+                          //  borderBottom: 'solid 3px black',
+                            //background: 'lightgray',
+                            //color: 'black',
+                            //fontWeight: 'bold',
+                        //}}
+                    //>{column.render('Header')}</th>
+                 
+                 
+                 //just junk
+                 {className='sort-asc'  onClick={this.column.isSorted}>
+                            ? ' 🔽'
+                          className='sort-desc'  onClick={this.column.isSortedDesc}>
+                            ? : ' 🔼'
+                          //className={
+                            //column.isSorted
+                              //onClick={() => this.column.isSorted}
+                              //? column.isSortedDesc
                               //? ' 🔽'
                               //: ' 🔼'
-                                ? "sort-desc"
-                                : "sort-asc"
-                              : "" }
+                                //? "sort-desc"
+                                //: "sort-asc"
+                              : ""
+                          }
 
 
-                        style={{
-                            borderBottom: 'solid 3px black',
-                            background: 'lightgray',
-                            color: 'black',
-                            fontWeight: 'bold',
-                               }} 
-                                   >{column.render('Header')}
-                        </th>
-                    ))}
-                </tr>
-            ))}
+                // Add the sorting props to control sorting. For this example
+                // we can add them into the header props
+                <th {...column.getHeaderProps(column.getSortByToggleProps())}>
+                  {column.render('Header')}
+                  {/* Add a sort direction indicator */}
+                  <span>
+                    {column.isSorted
+                      ? column.isSortedDesc
+                        ? ' 🔽'
+                        : ' 🔼'
+                      : ''}
+                  </span>
+                </th>
+
+
+
+
+                ))}
+            </tr>
+        ))}
         </thead>
         <tbody {...getTableBodyProps()}>
         {rows.map(row => {
