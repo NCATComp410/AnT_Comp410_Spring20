@@ -1,6 +1,5 @@
 import React from "react";
 import Papa from "papaparse";
-//import SortTable from "../Sort/SortTable";
 import TableView from "../TableView/TableView";
 
 class SimpleFileUploader extends React.Component {
