@@ -3,7 +3,7 @@ import React from "react";
 // https://react-table.js.org
 // react-table has several useful functions for working with
 // and manipulating tables
-import { useTable } from "react-table";
+import { useTable, useSortBy } from "react-table";
 
 /**
  * A component in charge of displaying the table and handling other table manipulations (sorting, filtering, etc.)
@@ -26,7 +26,7 @@ export const Table = ({ columns, data }) => {
   } = useTable({
     columns,
     data
-  });
+  },useSortBy);
 
   // Render the actual table UI
   return (
@@ -35,8 +35,17 @@ export const Table = ({ columns, data }) => {
         {headerGroups.map(headerGroup => (
           <tr {...headerGroup.getHeaderGroupProps()}>
             {headerGroup.headers.map(column => (
-              <th
-                {...column.getHeaderProps()}
+             
+              // Table header styling and props to allow sorting
+                        <th {...column.getHeaderProps(column.getSortByToggleProps())}
+                          className={ 
+                             column.isSorted
+                             ? column.isSortedDesc
+                              //? ' 🔽'
+                              //: ' 🔼'
+                                ? "sort-desc"
+                                : "sort-asc"
+                              : "" }
                 style={{
                   borderBottom: "solid 3px black",
                   background: "lightgray",

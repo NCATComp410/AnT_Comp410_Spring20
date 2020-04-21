@@ -12,7 +12,7 @@ describe("Test `App` Component", () => {
 
   test("renders Aggie Pride Text", () => {
     const { container } = render(<App />);
-    expect(container).toHaveTextContent("Aggie Pride-Cyber Pirates");
+    expect(container).toHaveTextContent("Aggie Pride WorldWide!");
   });
 
   test("renders `SimpleFileUploader", () => {

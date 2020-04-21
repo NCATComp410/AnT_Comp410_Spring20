@@ -30,5 +30,6 @@ const TableView = ({ parseResult: parsedResult }) => {
   // Once the column and the data has been retrieved from the parsedResult object. We provide them to the `Table`
   // component whose responsibility is to display the table
   return <Table data={data} columns={columns} />;
+
 };
 export default TableView;
