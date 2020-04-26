@@ -1,6 +1,6 @@
 import React from "react";
 import Papa from "papaparse";
-import TableView from "../TableView/TableView";
+import TableView from '../TableView/TableView';
 
 class SimpleFileUploader extends React.Component {
   constructor(props) {
@@ -15,8 +15,15 @@ class SimpleFileUploader extends React.Component {
     const reader = new FileReader();
     reader.onload = () => {
       const rawText = reader.result;
-      const parsedData = Papa.parse(rawText);
+      // https://www.papaparse.com
+      // Use header:true to automatically convert the
+      // header rows to a list which will appear in
+      // parsedData.meta.fields
+      const parsedData = Papa.parse(rawText, {
+        header: true
+      });
       this.setState({ fileData: parsedData });
+      console.log(parsedData);
     };
     reader.readAsText(uploadedFile);
   };
@@ -26,7 +33,7 @@ class SimpleFileUploader extends React.Component {
     return (
       <div>
         {fileData ? (
-          <TableView data={fileData} />
+          <TableView parseResult={fileData} />
         ) : (
           <input type="file" accept="text/csv" onChange={this.handleNewFile} />
         )}
