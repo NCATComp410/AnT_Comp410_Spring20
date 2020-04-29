@@ -1,59 +1,42 @@
 {
-  "name": "jupyterlab_tableview",
+  "name": "jupyter_tableview",
   "version": "0.1.0",
-  "description": "This project aims to add basic GUI manipulation of csv or excel files in a JupyterLab environment",
-  "keywords": [
-    "jupyter",
-    "jupyterlab",
-    "jupyterlab-extension"
-  ],
-  "homepage": "https://github.com/dmeyer3691/jupyterlab_tableview",
-  "bugs": {
-    "url": "https://github.com/dmeyer3691/jupyterlab_tableview"
-  },
-  "license": "BSD-3-Clause",
-  "author": "NC A&T University in partnership with Cisco Systems",
-  "files": [
-    "lib/**/*.{d.ts,eot,gif,html,jpg,js,js.map,json,png,svg,woff2,ttf}",
-    "style/**/*.{css,eot,gif,html,jpg,json,png,svg,woff2,ttf}"
-  ],
-  "main": "lib/index.js",
-  "types": "lib/index.d.ts",
-  "style": "style/index.css",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/dmeyer3691/jupyterlab_tableview.git"
+  "private": true,
+  "dependencies": {
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.2",
+    "papaparse": "^5.1.1",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-scripts": "^3.4.0",
+    "react-table": "^7.0.4",
+    "react-test-renderer": "^16.13.0"
   },
   "scripts": {
-    "build": "tsc",
-    "clean": "rimraf lib tsconfig.tsbuildinfo",
-    "prepare": "jlpm run clean && jlpm run build",
-    "watch": "tsc -w"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
   },
-  "dependencies": {
-    "@jupyterlab/application": "^1.0.0",
-    "@jupyterlab/apputils": "^1.2.1",
-    "@jupyterlab/docregistry": "^1.2.1",
-    "papaparse": "^5.1.1",
-    "react-table": "^7.0.0-rc.15",
-    "react": "~16.8.4"
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   },
   "devDependencies": {
-    "@types/papaparse": "^5.0.3",
-    "@types/react-dom": "^16.8.4",
-    "@types/react": "~16.8.18",
-    "@types/react-table": "^7.0.4",
-    "prettier": "^1.19.1",
-    "rimraf": "^2.6.1",
-    "typescript": "~3.5.2"
-  },
-  "resolutions": {
-    "@types/react": "~16.8.18"
-  },
-  "sideEffects": [
-    "style/*.css"
-  ],
-  "jupyterlab": {
-    "extension": true
+    "prettier": "^1.19.1"
   }
 }
