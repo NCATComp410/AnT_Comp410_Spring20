@@ -23,6 +23,7 @@ class SimpleFileUploader extends React.Component {
         header: true
       });
       this.setState({ fileData: parsedData });
+      console.log(parsedData);
     };
     reader.readAsText(uploadedFile);
   };

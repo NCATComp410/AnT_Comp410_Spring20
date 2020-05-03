@@ -23,10 +23,13 @@ export const Table = ({ columns, data }) => {
     headerGroups,
     rows,
     prepareRow
-  } = useTable({
-    columns,
-    data
-  },useSortBy);
+  } = useTable(
+    {
+      columns,
+      data
+    },
+    useSortBy
+  );
 
   // Render the actual table UI
   return (
@@ -35,17 +38,18 @@ export const Table = ({ columns, data }) => {
         {headerGroups.map(headerGroup => (
           <tr {...headerGroup.getHeaderGroupProps()}>
             {headerGroup.headers.map(column => (
-             
               // Table header styling and props to allow sorting
-                        <th {...column.getHeaderProps(column.getSortByToggleProps())}
-                          className={ 
-                             column.isSorted
-                             ? column.isSortedDesc
-                              //? ' 🔽'
-                              //: ' 🔼'
-                                ? "sort-desc"
-                                : "sort-asc"
-                              : "" }
+              <th
+                {...column.getHeaderProps(column.getSortByToggleProps())}
+                className={
+                  column.isSorted
+                    ? column.isSortedDesc
+                      ? //? ' 🔽'
+                        //: ' 🔼'
+                        "sort-desc"
+                      : "sort-asc"
+                    : ""
+                }
                 style={{
                   borderBottom: "solid 3px black",
                   background: "lightgray",
